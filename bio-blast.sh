@@ -9,3 +9,4 @@ makeblastdb -in zebrafish.1.protein.faa -dbtype prot
  less mm-second.x.zebrafish.txt
  blastp -query mm-second.fa -db zebrafish.1.protein.faa -out mm-second.x.zebrafish.tsv -ouutfmt 6
 blastp -query mm-second.fa -db zebrafish.1.protein.faa -out mm-second.x.zebrafish.tsv -outfmt 6
+# this is  for training
