@@ -1,20 +1,11 @@
-  660  ls 
-  661  cd planets
-  662  cd ..
-  663  las
-  664  ls
-  665  cd bio-blast
-  666  git remote add origin https://github.com/AllieZheng/bio-blast.git
-  667  git branch -M main
-  668  history | tail -n 20
-  669  history | tail -n 20 > bio-blast.sh
-  670  ls -a
-  671  nano bio-blast.sh
-  672  histroy
-  673  history
-  674  history -n 369-378
-  675  history --help
-  676  git remote add origin https://github.com/AllieZheng/bio-blast.git
-  677  git branch -M main
-  678  history
-  679  history | tail -n 20 > bio-blast.sh
+#!/bin/bash
+head -n 11 mouse.1.protein.faa > mm-first.fa  369  head -n 11 mouse.1.protein.faa > mm-first.fa
+makeblastdb -in zebrafish.1.protein.faa -dbtype prot
+ blastp -query mm-first.fa -db zebrafish.1.protein.faa
+ blastp -query mm-first.fa -db zebrafish.1.protein.faa -out mm-first.x.zebrafish.txt
+ less mm-first.x.zebrafish.txt
+ head -498 mouse.1.protein.faa > mm-second.fa
+ blastp -query mm-second.fa -db zebrafish.1.protein.faa -out mm-second.x.zebrafish.txt
+ less mm-second.x.zebrafish.txt
+ blastp -query mm-second.fa -db zebrafish.1.protein.faa -out mm-second.x.zebrafish.tsv -ouutfmt 6
+blastp -query mm-second.fa -db zebrafish.1.protein.faa -out mm-second.x.zebrafish.tsv -outfmt 6
